@@ -29,13 +29,13 @@ def communicate():
 
     st.session_state["user_input"] = ""  # 入力欄を消去
 
-def extract_string(text):
-    index = text.find(":")  # ":"のインデックスを検索
-    if index != -1:
-        extracted = text[:index]  # 先頭から":"までの部分を抽出
-        return extracted
-    else:
-        return None  # ":"が見つからなかった場合はNoneを返す
+# def extract_string(text):
+#     index = text.find(":")  # ":"のインデックスを検索
+#     if index != -1:
+#         extracted = text[:index]  # 先頭から":"までの部分を抽出
+#         return extracted
+#     else:
+#         return None  # ":"が見つからなかった場合はNoneを返す
 
 
 # ユーザーインターフェイスの構築
@@ -45,8 +45,8 @@ st.write("BCGメンバー向けのチャットボットです。メンバー以�
 user_input = st.text_input("'名前：'のあとにメッセージを入力してください。", key="user_input", on_change=communicate)
 
 # 文字列の抽出
-result = extract_string(user_input)
-st.write(user_input)
+# result = extract_string(user_input)
+# st.write(user_input)
 
 if st.session_state["messages"]:
     messages = st.session_state["messages"]
@@ -81,7 +81,7 @@ if st.session_state["messages"]:
 
     for message in reversed(messages[1:]):  # 直近のメッセージを上に
         if message["role"] == "user":
-            speaker = str(result)+"🍎"
+            speaker = "利用者🍎"
             bubble_class = "user"
         else:
             speaker = "ChatGPT🤖"
