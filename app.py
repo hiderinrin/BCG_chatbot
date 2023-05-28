@@ -72,6 +72,7 @@ if st.session_state["messages"]:
         .speaker {
             font-weight: bold;
             margin-bottom: 2px;
+            color: black;
         }
     </style>
     """, unsafe_allow_html=True)
