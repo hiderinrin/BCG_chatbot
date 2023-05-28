@@ -46,6 +46,7 @@ user_input = st.text_input("'名前：'のあとにメッセージを入力し�
 
 # 文字列の抽出
 result = extract_string(user_input)
+st.write(user_input)
 
 if st.session_state["messages"]:
     messages = st.session_state["messages"]
@@ -63,16 +64,17 @@ if st.session_state["messages"]:
             background-color: #E6E6FA;
             float: left;
             clear: both;
+            color: black;
         }
         .assistant {
             background-color: #00BFFF;
             float: right;
             clear: both;
+            color: white;
         }
         .speaker {
             font-weight: bold;
             margin-bottom: 2px;
-            color: black;
         }
     </style>
     """, unsafe_allow_html=True)
