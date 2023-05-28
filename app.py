@@ -42,7 +42,7 @@ def communicate():
 st.title("AI Assistant for BCG members")
 st.write("BCGメンバー向けのチャットボットです。メンバー以外の人からの質問は受け付けません。")
 
-user_input = st.text_input("'名前：'のあとにメッセージを入力してください。", key="user_input", on_change=communicate)
+user_input = st.text_input("'名前　'のあとにメッセージを入力してください。", key="user_input", on_change=communicate)
 
 # 文字列の抽出
 # result = extract_string(user_input)
